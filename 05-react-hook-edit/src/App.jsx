@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <div className="container">
-        <h1>Kontak App</h1>
+        <h1>Kontak Applications</h1>
         <ListKontak />
       </div>
     </>
