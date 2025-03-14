@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
-function Parent2({ nama }) {
-  return <div>Parent2 {nama}</div>;
+
+function Parent2({ nama = "Guest" }) {
+  return <>Parent2 {nama}</>;
 }
 
 Parent2.propTypes = {

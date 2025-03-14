@@ -3,10 +3,10 @@ import PropTypes from "prop-types";
 
 function Parent1({ nama }) {
   return (
-    <h1>
-      <div>Parent1</div>
+    <>
+      <h1>Parent1</h1>
       <Parent2 nama={nama} />
-    </h1>
+    </>
   );
 }
 
