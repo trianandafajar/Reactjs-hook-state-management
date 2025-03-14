@@ -1,17 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Parent1 from "./component/Parent1.jsx";
 
 function App() {
-  const [nama, setNama] = useState("");
+  const [nama] = useState("Pojok Code");
 
-  useEffect(() => {
-    setNama("Pojok Code");
-  }, []);
-  return (
-    <>
-      <Parent1 nama={nama} />
-    </>
-  );
+  return <Parent1 nama={nama} />;
 }
 
 export default App;
