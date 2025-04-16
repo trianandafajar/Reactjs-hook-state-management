@@ -1,5 +1,5 @@
-import Parent2 from "./Parent2.jsx";
 import PropTypes from "prop-types";
+import Parent2 from "./Parent2.jsx";
 
 function Parent1({ nama }) {
   return (
