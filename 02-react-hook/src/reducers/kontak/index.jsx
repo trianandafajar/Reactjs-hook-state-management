@@ -1,18 +1,16 @@
 const initialState = [];
 
-const kontak = (state = initialState, action) => {
-  const { type, payload } = action;
-
-  switch (type) {
+const kontakReducer = (state = initialState, action) => {
+  switch (action.type) {
     case "ADD_KONTAK":
-      return [...state, payload];
+      return [...state, action.payload];
 
     case "REMOVE_KONTAK":
-      return state.filter((kontak) => kontak.id !== payload);
+      return state.filter(kontak => kontak.id !== action.payload);
 
     default:
       return state;
   }
 };
 
-export default kontak;
+export default kontakReducer;
