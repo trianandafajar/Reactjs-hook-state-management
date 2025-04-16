@@ -1,4 +1,5 @@
 import kontakReducers from "./kontak";
+
 const initialState = {
   getKontakResult: false,
   getKontakLoading: false,
@@ -6,13 +7,13 @@ const initialState = {
 };
 
 const combineReducers = (reducers) => {
-  return (state, action) => {
-    return Object.keys(reducers).reduce((acc, prop) => {
+  return (state = {}, action) => {
+    return Object.keys(reducers).reduce((acc, key) => {
       return {
         ...acc,
-        ...reducers[prop]({ [prop]: state[prop] }, action),
+        [key]: reducers[key](state[key], action),
       };
-    }, state);
+    }, {});
   };
 };
 
